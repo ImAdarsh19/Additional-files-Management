@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.friends2support.org	TRUE	/	FALSE	1999999999	ASP.NET_SessionId	4cpzbymue1ps5gm2hkqfozpg
+www.friends2support.org	TRUE	/	FALSE	1999999999	SameSite	Lax
+
