@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Blood Bank Using MERN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Blood Bank is a web application developed using the MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to manage blood donation activities, catering to different roles such as admin, donor, hospital, and organization.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Roles:**
+  - Admin: Manages overall system settings, user roles, and data.
+  - Donor: Registers as a blood donor, view personal info and donation logs, and donate blood throught Organization.
+  - Hospital: Manages blood inventory, requests blood from Organization, Tracks consumers.
+  - Organization: Coordinates blood donation drives, manages events, and tracks donation statistics.
 
-### `npm start`
+- **Authentication:**
+  - JWT (JSON Web Tokens) are used for secure authentication.
+  - Passwords are encrypted using a bycrypt library.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:**
+  - Developed using React.js for a dynamic and responsive user interface.
+  - State management is handled using Redux Toolkit.
+  - Bootstrap for styling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Backend:**
+  - Built with Node.js and Express.js, following the MVC (Model-View-Controller) architecture.
+  - MongoDB is used as the database with Mongoose for data modeling.
+  - Axios and Cors for handling cross origin request and responses.
+  - Morgan and colors for error log handling.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js and npm installed on your machine.
+- MongoDB database.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Backend:**
+   ```bash
+   npm install
+   ```
+   Configure the MongoDB connection in config/db.js.
+2. **FrontEnd:**
+   ```bash
+   cd client
+   npm install
+   ```
+### Running the Application
+In root directory
+```bash
+npm start
+```
+The React app will be accessible at http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Note:
+#### Set your .env
+- Frontend:
+  REACT_APP_BASEURL = http://localhost:8080/api/v1
+- Backend:
+  JWT_SECRET, MONGO_URL, DEV_MODE = development, PORT = 8080
 
 ### Deployment
+- Backend: Deployed on Render.
+- Frontend: Deployed on Netlify.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots
+![Alt text](screenshots/blood.png "1")
+![Alt text](screenshots/blood1.png "2")
+![Alt text](screenshots/blood2.png "3")
